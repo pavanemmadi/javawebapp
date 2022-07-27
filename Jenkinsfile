@@ -3,37 +3,37 @@ pipeline {
     stages {
         stage('Clean') { 
             steps {
-                'mvn clean' 
+                sh 'mvn clean' 
             }
         }
         stage('Validate') { 
             steps {
-                'mvn validate' 
+                sh 'mvn validate' 
             }
         }
         stage('Compile') { 
             steps {
-                'mvn Compile'  
+                sh 'mvn Compile'  
             }
         }
         stage('Test') { 
             steps {
-                'mvn test -DskipTests'  
+                sh 'mvn test -DskipTests'  
             }
         }
         stage('Package') { 
             steps {
-                'mvn package -DskipTests'  
+                sh 'mvn package -DskipTests'  
             }
         }
          stage('Verify') { 
             steps {
-                'mvn verify -DskipTests'  
+                sh 'mvn verify -DskipTests'  
             }
         }
          stage('Install') { 
             steps {
-                'mvn install -DskipTests'   
+                sh 'mvn install -DskipTests'   
             }
         }
     }
