@@ -1,39 +1,63 @@
 pipeline {
     agent any 
+    tools {
+         maven 'maven'
+         jdk 'java'
+    }
     stages {
-        stage('Clean') { 
+        stage('Stage-0 : Static Code Quality Using SonarQube') { 
             steps {
-                sh 'mvn clean' 
+                sh 'mvn sonar:sonar' 
             }
         }
-        stage('Validate') { 
+        stage('Stage-1 : Clean') { 
             steps {
-                sh 'mvn validate' 
+                sh 'mvn clean'
             }
         }
-        stage('Compile') { 
+        stage('Stage-2 : Validate') { 
             steps {
-                sh 'mvn compile'  
+                sh 'mvn validate'
             }
         }
-        stage('Test') { 
+        stage('Stage-3 : Compile') { 
             steps {
-                sh 'mvn test -DskipTests'  
+                sh 'mvn compile'
             }
         }
-        stage('Package') { 
+        stage('Stage-4 : Test') { 
             steps {
-                sh 'mvn package -DskipTests'  
+                sh 'mvn test -DskipTests'
             }
         }
-         stage('Verify') { 
+        stage('Stage-5 : Install') { 
             steps {
-                sh 'mvn verify -DskipTests'  
+                sh 'mvn install -DskipTests'
             }
         }
-         stage('Install') { 
+        stage('Stage-6 : Verify') { 
             steps {
-                sh 'mvn install -DskipTests'   
+                sh 'mvn verify -DskipTests'
+            }
+        }
+        stage('Stage-7 : Package') { 
+            steps {
+                sh 'mvn package -DskipTests'
+            }
+        }
+//         stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+//             steps {
+//                 sh 'mvn deploy -DskipTests'
+//             }
+//         }
+        stage('Stage-8 : Deployment - Deploy a Artifact devops-2.0.0-SNAPSHOT.war file to Tomcat Server') { 
+            steps {
+                sh 'curl -u admin:redhat@123 -T target/**.war "http://18.212.206.34:8080/manager/text/deploy?path=/rrtech&update=true"'
+            }
+        } 
+        stage('Stage-9 : SmokeTest') { 
+            steps {
+                sh 'curl --retry-delay 10 --retry 5 "http://18.212.206.34:8080/rrtech"'
             }
         }
     }
