@@ -5,11 +5,11 @@ pipeline {
          jdk 'java'
     }
     stages {
-//         stage('Stage-0 : Static Code Quality Using SonarQube') { 
-//             steps {
-//                 sh 'mvn sonar:sonar' 
-//             }
-//         }
+         stage('Stage-0 : Static Code Quality Using SonarQube') { 
+             steps {
+                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=aws-rrtech -DskipTests' 
+              }
+          }
         stage('Stage-1 : Clean') { 
             steps {
                 sh 'mvn clean'
@@ -50,15 +50,15 @@ pipeline {
 //                 sh 'mvn deploy -DskipTests'
 //             }
 //         }
-        stage('Stage-8 : Deployment - Deploy a Artifact cloudops-1.0.0.war file to Tomcat Server') { 
-            steps {
-                sh 'curl -u admin:redhat@123 -T target/**.war "http://18.212.206.34:8080/manager/text/deploy?path=/rrtech&update=true"'
-            }
-        } 
-        stage('Stage-9 : SmokeTest') { 
-            steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://18.212.206.34:8080/rrtech"'
-            }
-        }
+//         stage('Stage-8 : Deployment - Deploy a Artifact cloudops-1.0.0.war file to Tomcat Server') { 
+//             steps {
+//                 sh 'curl -u admin:redhat@123 -T target/**.war "http://18.212.206.34:8080/manager/text/deploy?path=/rrtech&update=true"'
+//             }
+//         } 
+//         stage('Stage-9 : SmokeTest') { 
+//             steps {
+//                 sh 'curl --retry-delay 10 --retry 5 "http://18.212.206.34:8080/rrtech"'
+//             }
+//         }
     }
 }
