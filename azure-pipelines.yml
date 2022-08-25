@@ -12,7 +12,7 @@ steps:
     mavenOptions: '-Xmx3072m'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'deploy -DskipTests'
+    goals: 'package -DskipTests'
 
 - task: PublishPipelineArtifact@1
   inputs:
