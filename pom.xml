@@ -4,7 +4,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>cloudops</artifactId>
-	<version>1.0.0</version>
+	<version>7.0.0</version>
 	<packaging>war</packaging>
 
 	<name>Cloud Binary</name>
@@ -50,8 +50,8 @@
 -->
 <distributionManagement>
 	<repository>
-  		<id>cloudbinary</id>
-  		<url>https://pkgs.dev.azure.com/cloudbinary/_packaging/cloudbinary/maven/v1</url>
+  		<id>rrtech-dev</id>
+  		<url>https://pkgs.dev.azure.com/rrtech-dev/_packaging/rrtech-dev/maven/v1</url>
   	<releases>
    	 	<enabled>true</enabled>
   	</releases>
