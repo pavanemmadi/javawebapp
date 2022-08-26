@@ -27,10 +27,10 @@
 		<jacoco.version>0.7.9</jacoco.version>
 		
 		<!-- SonarQube Integration -->
-        <sonar.projectKey>aws-rrtech</sonar.projectKey>
-        <sonar.organization>opscenter</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.login>52699a86f07efe01c13ebd301ebc694ad57ff9b0</sonar.login>
+        <sonar.projectKey>rrtech-awsdevops</sonar.projectKey>
+        <sonar.organization>rrtech-awsdevops</sonar.organization>
+        <sonar.host.url>http://52.91.159.51:9000</sonar.host.url>
+        <sonar.login>sqp_4c4c64253149e6ad10ad3101ff424035397a5d6b</sonar.login>
 
 	</properties>
 	
