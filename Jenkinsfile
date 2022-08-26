@@ -45,11 +45,11 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
-//         stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
-//             steps {
-//                 sh 'mvn deploy -DskipTests'
-//             }
-//         }
+        stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+            steps {
+                sh 'mvn deploy -DskipTests'
+            }
+        }
 //         stage('Stage-8 : Deployment - Deploy a Artifact cloudops-1.0.0.war file to Tomcat Server') { 
 //             steps {
 //                 sh 'curl -u admin:redhat@123 -T target/**.war "http://18.212.206.34:8080/manager/text/deploy?path=/rrtech&update=true"'
