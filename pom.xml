@@ -27,10 +27,10 @@
 		<jacoco.version>0.7.9</jacoco.version>
 		
 		<!-- SonarQube Integration -->
-        <sonar.projectKey>rrtech-awsdevops</sonar.projectKey>
-        <sonar.organization>rrtech-awsdevops</sonar.organization>
-        <sonar.host.url>http://52.91.159.51:9000</sonar.host.url>
-        <sonar.login>sqp_4c4c64253149e6ad10ad3101ff424035397a5d6b</sonar.login>
+        <sonar.projectKey>jenkin</sonar.projectKey>
+        <sonar.organization>jenkins-pipe</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>470f06affc73ac15a8c94eb7d638b9809df29cc4</sonar.login>
 
 	</properties>
 	
