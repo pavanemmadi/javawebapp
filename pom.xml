@@ -26,11 +26,11 @@
 		<surefire.version>3.0.0-M7</surefire.version>
 		<jacoco.version>0.7.9</jacoco.version>
 		
-		<!-- SonarQube Integration -->
-        <sonar.projectKey>jenkin</sonar.projectKey>
-        <sonar.organization>jenkins-pipe</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.login>470f06affc73ac15a8c94eb7d638b9809df29cc4</sonar.login>
+//		<!-- SonarQube Integration -->
+   //     <sonar.projectKey>jenkin</sonar.projectKey>
+   //     <sonar.organization>jenkins-pipe</sonar.organization>
+   //     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  //      <sonar.login>470f06affc73ac15a8c94eb7d638b9809df29cc4</sonar.login>
 
 	</properties>
 	
