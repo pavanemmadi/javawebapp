@@ -4,12 +4,6 @@ pipeline {
          maven 'maven'
          jdk 'java'
     }
-     // stages {
-       //   stage('Stage-0 : Static Code Quality Using SonarQube') { 
-       //       steps {
-        //          sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jenkin'
-     //          }
-    //      }
         stage('Stage-1 : Clean') { 
             steps {
                 sh 'mvn clean'
