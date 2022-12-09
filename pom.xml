@@ -50,9 +50,9 @@
 	
 	
 	<scm>
-		<connection>scm:git:git@github.com:kesavkummari/javawebapp.git</connection>
-		<developerConnection>scm:git:git@github.com:kesavkummari/javawebapp.git</developerConnection>
-		<url>git@github.com:kesavkummari/javawebapp.git</url>
+		<connection>scm:git:https://github.com/pavanemmadi/javawebapp/tree/pavantech.git</connection>
+		<developerConnection>scm:git:https://github.com/pavanemmadi/javawebapp/tree/pavantech.git</developerConnection>
+		<url>https://github.com/pavanemmadi/javawebapp/tree/pavantech.git</url>
 		<tag>HEAD</tag>
 	</scm>
 
